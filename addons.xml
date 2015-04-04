@@ -1,3 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<!--suppress ALL -->
+<addon id="plugin.video.1channel" version="2.5.69" name="PrimeWire" provider-name="tknorris, kodaxx">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.urlresolver" version="2.2.0"/>
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.metahandler" version="2.6.0" />
+        <import addon="script.module.myconnpy" version="1.1.6" />
+        <import addon="script.module.axel.downloader" version="0.2.0" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Browse primeware.ag</summary>
+        <description>Play a wide selection of movies and TV shows from PrimeWire.ag.
+        </description>
+        <platform>all</platform>
+        <website></website>
+		<forum></forum>
+    </extension>
+</addon>
+
+<addon id="repository.movienightupdates" name="Movie Night Updates" version="1.0.0" provider-name="movienight">
+	<extension point="xbmc.addon.repository" name="Movie Night Updates">
+		<info compressed="false">https://raw.githubusercontent.com/thinkgen/movie-night-updates/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/thinkgen/movie-night-updates/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/thinkgen/movie-night-updates/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Updates for Movie Night Plug-ins</summary>
+		<description></description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
 </addons>
